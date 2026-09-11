@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rohan Kumar Prusty | SDE &amp; Systems Analyst Portfolio | IIIT Jabalpur</title>
+<!-- Inter Font & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome 6 for crisp icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#07080e',
+              surface: '#0d0f17',
+              card: '#121624',
+              border: '#1e2438',
+              borderGlow: '#2e3857',
+              accent: '#3b82f6',
+              accentCyan: '#06b6d4',
+              accentEmerald: '#10b981',
+              accentAmber: '#f59e0b',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'glow-spin': 'spin 12s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="custom-layout-and-glow">
+    body {
+      background-color: #07080e;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* Background grid styling resembling modern cloud architecture platforms */
+    .bg-tech-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+    
+    /* Subtle radial illumination */
+    .radial-glow {
+      background: radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.12), transparent 60%);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07080e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2438;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3b82f6;
+    }
+
+    /* Signature filter inversion for pure clean aesthetic on dark mode */
+    .signature-dark-mode {
+      filter: invert(1) brightness(1.9) contrast(1.1) drop-shadow(0 2px 8px rgba(59, 130, 246, 0.35));
+    }
+    
+    /* Glass card backdrop */
+    .glass-card {
+      background: rgba(18, 22, 36, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(30, 36, 56, 0.85);
+    }
+
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(59, 130, 246, 0.45);
+      box-shadow: 0 10px 35px -10px rgba(59, 130, 246, 0.2);
+      transform: translateY(-2px);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="relative min-h-screen bg-tech-grid antialiased selection:bg-brand-accent selection:text-white">
+<!-- Radial atmospheric aura -->
+<div class="fixed inset-0 pointer-events-none radial-glow z-0"></div>
+<!-- BEGIN: Left Floating Executive Dock -->
+<aside class="fixed left-5 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center gap-3 p-2.5 rounded-2xl glass-card shadow-2xl border border-brand-border" data-purpose="dock-navigation">
+<!-- Brand Logo Icon -->
+<a class="w-10 h-10 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-brand-accent font-mono font-bold text-sm hover:border-brand-accent transition-all group relative" href="#home" title="Rohan Kumar Prusty - Top">
+      RP
+      <span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">Home (Top)</span>
+</a>
+<div class="w-6 h-px bg-brand-border my-1"></div>
+<!-- Nav items -->
+<a class="w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-brand-surface flex items-center justify-center transition-all group relative" href="#recruiter-snapshot">
+<i class="fa-solid fa-bolt-lightning text-sm"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">10s Recruiter Dossier</span>
+</a>
+<a class="w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-brand-surface flex items-center justify-center transition-all group relative" href="#projects">
+<i class="fa-solid fa-code-branch text-sm"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">Production Systems</span>
+</a>
+<a class="w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-brand-surface flex items-center justify-center transition-all group relative" href="#technical-matrix">
+<i class="fa-solid fa-layer-group text-sm"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">Technical &amp; DSA Matrix</span>
+</a>
+<a class="w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-brand-surface flex items-center justify-center transition-all group relative" href="#leadership-athletics">
+<i class="fa-solid fa-medal text-sm"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">Leadership &amp; Athletics</span>
+</a>
+<a class="w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-brand-surface flex items-center justify-center transition-all group relative" href="#education">
+<i class="fa-solid fa-graduation-cap text-sm"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">IIIT Jabalpur ECE</span>
+</a>
+<a class="w-10 h-10 rounded-xl text-slate-400 hover:text-emerald-400 hover:bg-brand-surface flex items-center justify-center transition-all group relative" href="#contact">
+<i class="fa-solid fa-envelope text-sm"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">Direct Reachout</span>
+</a>
+<div class="w-6 h-px bg-brand-border my-1"></div>
+<!-- Quick ⌘K palette trigger -->
+<button class="w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/30 text-brand-accent hover:bg-brand-accent hover:text-white flex items-center justify-center transition-all group relative" onclick="toggleRecruiterModal()" title="Recruiter Quick Dossier">
+<i class="fa-solid fa-briefcase text-xs"></i>
+<span class="absolute left-14 bg-brand-surface border border-brand-border text-xs px-2.5 py-1 rounded-md text-white whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-lg">Open 30s Executive Modal</span>
+</button>
+</aside>
+<!-- END: Left Floating Executive Dock -->
+<!-- BEGIN: Top Navigation Header -->
+<header class="sticky top-0 z-40 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border" data-purpose="site-header">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Brand identification -->
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2.5 group" href="#home">
+<div class="w-9 h-9 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center group-hover:border-brand-accent transition-colors">
+<span class="font-mono text-xs font-bold text-brand-accent">RKP</span>
+</div>
+<div>
+<h1 class="text-sm font-semibold tracking-tight text-white flex items-center gap-1.5">
+              Rohan Kumar Prusty
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+</h1>
+<p class="text-[11px] text-slate-400 font-mono">IIIT Jabalpur • ECE '28 • CPI 8.1</p>
+</div>
+</a>
+</div>
+<!-- Recruiter Persona Switcher & Live Visitor Counter -->
+<div class="flex items-center gap-3 md:gap-5">
+<!-- Live Verified Visitor Capsule (Design matching snapshot) -->
+<div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-brand-card/90 border border-brand-border text-[11px] font-mono text-slate-300 shadow-inner">
+<span class="text-brand-accentCyan font-medium">Total Visits</span>
+<span class="w-1 h-1 rounded-full bg-brand-border"></span>
+<span class="text-white font-bold tracking-wider" id="visitor-counter">2,684</span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+</div>
+<!-- Dual Recruiter Persona Toggle Switch -->
+<div class="flex items-center p-1 rounded-xl bg-brand-surface border border-brand-border" data-purpose="persona-selector">
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-all bg-brand-accent text-white shadow-sm" id="persona-sde-btn" onclick="setPersona('sde')">
+<i class="fa-solid fa-code text-[11px]"></i>
+<span>Software Eng</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white" id="persona-analyst-btn" onclick="setPersona('analyst')">
+<i class="fa-solid fa-chart-line text-[11px]"></i>
+<span>Systems &amp; Analyst</span>
+</button>
+</div>
+<!-- Quick 30-Sec Dossier Modal Button -->
+<button class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-brand-dark hover:bg-slate-200 transition-all shadow-sm" onclick="toggleRecruiterModal()">
+<i class="fa-solid fa-file-lines text-xs"></i>
+<span>Recruiter 30s View</span>
+</button>
+<!-- Direct Resume Download link button -->
+<a class="inline-flex items-center justify-center w-9 h-9 md:w-auto md:px-3 md:py-1.5 rounded-lg text-xs font-semibold bg-brand-surface border border-brand-border hover:border-brand-accent text-slate-200 transition-all" href="mailto:rohanprusty28@gmail.com?subject=Interview%20Inquiry%20-%20Rohan%20Kumar%20Prusty">
+<i class="fa-solid fa-download md:mr-1.5"></i>
+<span class="hidden md:inline">Download CV</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: Top Navigation Header -->
+<!-- BEGIN: Main Content Area -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:pl-24 space-y-24">
+<!-- BEGIN: Hero Section -->
+<section class="pt-4 md:pt-10" data-purpose="hero-section" id="home">
+<!-- Top banner notification pill -->
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-border text-xs text-slate-300 mb-8 shadow-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-medium text-slate-200">Open to Summer 2026 SDE &amp; Product / Business Systems Analyst Internships</span>
+<i class="fa-solid fa-arrow-right text-[10px] text-slate-500"></i>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: Authentic Portrait Neo-Card -->
+<div class="lg:col-span-5 flex flex-col items-center lg:items-start">
+<div class="relative w-full max-w-sm">
+<!-- Atmospheric background ring glow -->
+<div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-accent via-cyan-500 to-emerald-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+<!-- Profile image container with authentic portrait -->
+<div class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-surface shadow-2xl aspect-[3/4]">
+<img alt="Rohan Kumar Prusty - Portrait" class="w-full h-full object-cover object-top filter contrast-[1.02] brightness-95 hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUC8G1SS67dDtSVa8jXu5khOzp5ZR1_lhq37x5jcHCmxX8hDKILHMMkueNtVkscdIXbbp_PaXANF2TonS6CoqakEcWqKsTlviw-ZQvGfhq7ApDTGJ_jC71kE0Cw4ZTl4qT8Et1JUeU9zYhq6oqUMn_G3Aa5gcyS8zTxtgi2wVnAyNURHffwiLGjM7OmWb9gcMQo5xXGnC1DG3z7-LBKBNAxqWzhqMmCfnCNGsTjtcjAYexfTMW1CRGi0kIvrgzT_l-7gk"/>
+<!-- Subtle gradient overlay at bottom of photo -->
+<div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent"></div>
+<!-- Bottom overlay badge on photo -->
+<div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl glass-card border border-white/10 flex items-center justify-between">
+<div>
+<div class="text-xs font-semibold text-white">Rohan Kumar Prusty</div>
+<div class="text-[11px] text-slate-400 font-mono">IIIT Jabalpur • B.Tech ECE</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono">
+<i class="fa-solid fa-shield-halved"></i> CPI 8.1
+                </div>
+</div>
+</div>
+<!-- Authentic Signature Display Stamp (Exact transparent signature provided) -->
+<div class="mt-4 p-3 rounded-xl bg-brand-card/90 border border-brand-border flex items-center justify-between shadow-lg">
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest pl-1">
+                Verified Sign-Off
+              </div>
+<div class="w-36 h-12 flex items-center justify-center">
+<img alt="Rohan's Authentic Signature" class="h-full w-auto object-contain signature-dark-mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAudpYyGqxOezKhtZIJiOal0sP4r9z8Ioy4hTkp6iAHn3W3H-GT7yWdpw5HP8TwwALjuNdVxlw6Q_opi_8Jhw39EUFvKvP6bf4r5MDMYDN0MeCbD0uArlN-SjmIXoUFsdFE-ehzxd2GngLE0hZ9Jiklyd624UXd4xZWi0BoROPWO9TrYILNhPqyjfacLXHvXYn4oQY3-3vkdQQXDzuZYPXIKtL4ukwZi5o-h_r6TaHr7Arrae97YP_MFjhzHqw3OHW1SmI"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Professional Positioning, Terminal & Persona Copy -->
+<div class="lg:col-span-7 space-y-6">
+<div class="space-y-3">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 text-brand-accent border border-blue-500/20 text-xs font-mono font-medium tracking-wide">
+<i class="fa-solid fa-terminal text-[11px]"></i>
+<span id="role-subheading">FULL STACK SDE &amp; DISTRIBUTED SYSTEMS ENTHUSIAST</span>
+</div>
+<h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              Engineering Scalable Systems. <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-cyan-400 to-emerald-400">
+                Translating Rigour into Impact.
+              </span>
+</h2>
+<p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal" id="persona-summary">
+              ECE undergraduate at <strong>IIIT Jabalpur</strong> (CPI: 8.1) bridging low-level computational logic with scalable MERN/Voice-AI architectures, sub-150ms client integrations, and high-integrity algorithmic optimization.
+            </p>
+</div>
+<!-- Developer Interactive Terminal Simulation (Inspired by screenshot CLI bash) -->
+<div class="rounded-xl overflow-hidden border border-brand-border bg-black/90 shadow-2xl font-mono text-xs" data-purpose="interactive-bash-terminal">
+<!-- Terminal Title Bar -->
+<div class="bg-brand-surface/90 px-4 py-2.5 border-b border-brand-border flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+<span class="ml-2 text-slate-400 text-[11px]">bash — rohan@iiitdmj-terminal</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<button class="hover:text-white px-2 py-0.5 rounded bg-brand-card text-[10px]" onclick="runTerminalCommand('whoami')">whoami</button>
+<button class="hover:text-white px-2 py-0.5 rounded bg-brand-card text-[10px]" onclick="runTerminalCommand('metrics')">metrics</button>
+<button class="hover:text-white px-2 py-0.5 rounded bg-brand-card text-[10px]" onclick="runTerminalCommand('contact')">contact</button>
+</div>
+</div>
+<!-- Terminal Output Area -->
+<div class="p-4 space-y-2 text-slate-300 max-h-48 overflow-y-auto leading-relaxed" id="terminal-body">
+<p class="text-emerald-400">$ npm run query:candidate --quick</p>
+<p class="text-slate-400">
+                + Name: <span class="text-white font-semibold">Rohan Kumar Prusty</span><br/>
+                + University: <span class="text-white">IIIT Jabalpur (ECE, 2024 - Present, CPI: 8.1)</span><br/>
+                + Algorithmic Standing: <span class="text-brand-accent font-semibold">LeetCode Peak 1613 (300+ Solved)</span><br/>
+                + Production Stacks: <span class="text-white">React 19, Node.js, MERN, Docker, Web Speech API, MongoDB</span><br/>
+                + Inter-IIIT Athletics: <span class="text-amber-400">Gold Medalist Basketball (16+ Teams)</span>
+</p>
+<div class="flex items-center gap-1.5 text-emerald-400 pt-1">
+<span>$</span>
+<span class="text-slate-200" id="terminal-prompt">ready for summer internship queries</span>
+<span class="w-2 h-4 bg-emerald-400 animate-pulse"></span>
+</div>
+</div>
+</div>
+<!-- Hero Action Buttons -->
+<div class="flex flex-wrap items-center gap-3.5 pt-2">
+<a class="px-5 py-3 rounded-xl bg-brand-accent hover:bg-blue-600 text-white font-medium text-sm flex items-center gap-2 shadow-lg shadow-blue-500/25 transition-all" href="#projects">
+<span>Inspect Systems &amp; Code</span>
+<i class="fa-solid fa-arrow-down text-xs"></i>
+</a>
+<button class="px-5 py-3 rounded-xl bg-brand-surface border border-brand-border hover:border-brand-accent text-slate-200 font-medium text-sm flex items-center gap-2 transition-all" onclick="toggleRecruiterModal()">
+<i class="fa-solid fa-bolt text-brand-accentCyan"></i>
+<span>Recruiter 30-Sec Dossier</span>
+</button>
+<a class="px-5 py-3 rounded-xl bg-brand-surface/60 border border-brand-border hover:border-slate-500 text-slate-300 font-medium text-sm flex items-center gap-2 transition-all" href="#contact">
+<i class="fa-regular fa-comments"></i>
+<span>Get in Touch</span>
+</a>
+</div>
+<!-- Direct Social Quick Bar -->
+<div class="flex items-center gap-4 text-xs font-mono text-slate-400 pt-2 border-t border-brand-border/60">
+<span class="text-slate-400">Connect:</span>
+<a class="hover:text-brand-accent flex items-center gap-1.5 transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin text-sm"></i> <span>LinkedIn</span>
+</a>
+<span class="text-slate-700">•</span>
+<a class="hover:text-brand-accent flex items-center gap-1.5 transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i> <span>GitHub</span>
+</a>
+<span class="text-slate-700">•</span>
+<span class="text-slate-300 font-mono flex items-center gap-1">
+<i class="fa-solid fa-location-dot text-brand-accent"></i> Jabalpur, MP
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: 10-Second Recruiter Executive Snapshot -->
+<section class="space-y-6" data-purpose="executive-metrics" id="recruiter-snapshot">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-brand-border pb-4">
+<div>
+<div class="text-xs font-mono text-brand-accent uppercase tracking-widest">High Signal Evaluation</div>
+<h3 class="text-2xl font-bold text-white tracking-tight">10-Second Recruiter Executive Snapshot</h3>
+</div>
+<div class="text-xs text-slate-400 font-mono">
+          Strictly verified from academic transcript &amp; technical builds
+        </div>
+</div>
+<!-- 4-Card Executive Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1: CPI & University -->
+<div class="p-5 rounded-2xl glass-card glass-card-hover relative overflow-hidden">
+<div class="text-brand-accent text-lg mb-3">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+<div class="text-3xl font-extrabold text-white tracking-tight">8.1 <span class="text-base font-normal text-slate-400 font-mono">/ 10</span></div>
+<div class="text-sm font-semibold text-slate-200 mt-1">CPI @ IIIT Jabalpur</div>
+<p class="text-xs text-slate-400 mt-2 leading-relaxed">
+            Institute of National Importance. ECE '28 with strong academic grounding across Computer Networks, OS, DBMS &amp; DSA.
+          </p>
+<div class="mt-3 inline-block px-2 py-0.5 rounded bg-blue-500/10 text-brand-accent text-[11px] font-mono">Tier-1 Engineering</div>
+</div>
+<!-- Metric 2: Problem Solving Rating -->
+<div class="p-5 rounded-2xl glass-card glass-card-hover relative overflow-hidden">
+<div class="text-emerald-400 text-lg mb-3">
+<i class="fa-solid fa-code"></i>
+</div>
+<div class="text-3xl font-extrabold text-white tracking-tight">1613 <span class="text-base font-normal text-emerald-400 font-mono">Peak</span></div>
+<div class="text-sm font-semibold text-slate-200 mt-1">LeetCode Competitive Rating</div>
+<p class="text-xs text-slate-400 mt-2 leading-relaxed">
+            Top competitive bracket with <strong>300+ complex algorithmic problems</strong> solved across LeetCode, Codeforces &amp; GeeksforGeeks.
+          </p>
+<div class="mt-3 inline-block px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono">Top Percentile C++ / DSA</div>
+</div>
+<!-- Metric 3: Production Engineering Apps -->
+<div class="p-5 rounded-2xl glass-card glass-card-hover relative overflow-hidden">
+<div class="text-cyan-400 text-lg mb-3">
+<i class="fa-solid fa-cubes-stacked"></i>
+</div>
+<div class="text-3xl font-extrabold text-white tracking-tight">3 <span class="text-base font-normal text-cyan-400 font-mono">Systems</span></div>
+<div class="text-sm font-semibold text-slate-200 mt-1">Production-Grade Builds</div>
+<p class="text-xs text-slate-400 mt-2 leading-relaxed">
+            Synthora AI (&lt;50ms compiler), Conversa AI (O(1) microfrontend), NextRound AI (B2B Interview OS with biometric telemetry).
+          </p>
+<div class="mt-3 inline-block px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 text-[11px] font-mono">Full-Stack &amp; CLI tooling</div>
+</div>
+<!-- Metric 4: Leadership & Tournament Win -->
+<div class="p-5 rounded-2xl glass-card glass-card-hover relative overflow-hidden">
+<div class="text-amber-400 text-lg mb-3">
+<i class="fa-solid fa-trophy"></i>
+</div>
+<div class="text-3xl font-extrabold text-white tracking-tight">Gold <span class="text-base font-normal text-amber-400 font-mono">1st / 16</span></div>
+<div class="text-sm font-semibold text-slate-200 mt-1">Inter-IIIT Sports Meet 2025</div>
+<p class="text-xs text-slate-400 mt-2 leading-relaxed">
+            National collegiate basketball champions. Co-coordinator managing 7+ large tournaments &amp; 1st Runner-Up at IIT Roorkee E-Summit.
+          </p>
+<div class="mt-3 inline-block px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono">Clutch Execution Under Pressure</div>
+</div>
+</div>
+</section>
+<!-- END: 10-Second Recruiter Executive Snapshot -->
+<!-- BEGIN: Flagship Projects Section -->
+<section class="space-y-8" data-purpose="flagship-projects" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-brand-border pb-4">
+<div>
+<div class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Engineering Portfolio</div>
+<h3 class="text-2xl font-bold text-white tracking-tight">Architected &amp; Shipped Systems</h3>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-2 p-1 rounded-xl bg-brand-surface border border-brand-border text-xs font-mono">
+<span class="px-3 py-1 rounded-lg bg-brand-card text-brand-accent font-semibold border border-brand-border">All Builds (3)</span>
+<span class="px-3 py-1 rounded-lg text-slate-400 hover:text-white cursor-pointer" onclick="filterTech('ai')">AI &amp; Voice</span>
+<span class="px-3 py-1 rounded-lg text-slate-400 hover:text-white cursor-pointer" onclick="filterTech('arch')">Micro-Frontends</span>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Project 1: SYNTHORA AI -->
+<article class="p-6 sm:p-8 rounded-3xl glass-card glass-card-hover border border-brand-border relative overflow-hidden" data-purpose="project-card">
+<div class="flex flex-col lg:flex-row justify-between gap-6">
+<div class="space-y-4 max-w-2xl">
+<!-- Meta Tags -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+<span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-brand-accent border border-blue-500/20 font-semibold">React 19</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">Node.js</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">OpenRouter API</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">MongoDB</span>
+<span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Razorpay Webhooks</span>
+<span class="text-slate-400 ml-auto">Aug 2025</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-white flex items-center gap-3">
+<span>Synthora AI</span>
+<span class="text-sm font-normal text-slate-400">— AI-Powered SaaS Platform &amp; Developer CLI</span>
+</h4>
+<p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                  Engineered an AI-powered SaaS platform leveraging vision-to-code models to dynamically generate production-ready React components, paired with an in-browser sandbox and an official NPM CLI utility for frictionless developer workflows.
+                </p>
+</div>
+<!-- Technical High-Impact Bullets strictly from resume -->
+<ul class="space-y-2 text-xs text-slate-300 font-sans">
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+<span><strong>Sub-50ms Compile Latency:</strong> Architected an in-browser sandbox executing dynamic JSX compilation and vision-to-code rendering in real-time.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+<span><strong>Published Node.js CLI to NPM Registry:</strong> Developed a CLI tool empowering engineers to inject generated component UI assets directly into local workspaces with one terminal instruction.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+<span><strong>Enterprise Monetization &amp; Auth:</strong> Full-stack MERN infrastructure with stateless JWT authentication and transactional Razorpay webhooks handling tiered credit-based allowances.</span>
+</li>
+</ul>
+<!-- Quantitative Metric Pills -->
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-brand-accent">&lt; 50ms</div>
+<div class="text-[10px] font-mono text-slate-400">Sandbox Compile Latency</div>
+</div>
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-emerald-400">NPM Package</div>
+<div class="text-[10px] font-mono text-slate-400">Published CLI Scaffolder</div>
+</div>
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-white">Tiered SaaS</div>
+<div class="text-[10px] font-mono text-slate-400">Credit Billing System</div>
+</div>
+</div>
+</div>
+<!-- Interactive Architecture Micro-Diagram -->
+<div class="lg:w-80 flex flex-col justify-between bg-brand-surface/90 p-4 rounded-2xl border border-brand-border text-xs font-mono space-y-4">
+<div class="text-slate-400 flex items-center justify-between border-b border-brand-border/60 pb-2">
+<span class="text-[11px] text-slate-300 font-semibold"><i class="fa-solid fa-diagram-project mr-1.5 text-brand-accent"></i>Pipeline Architecture</span>
+<span class="text-[10px] text-emerald-400">Production Ready</span>
+</div>
+<!-- Flow Steps -->
+<div class="space-y-2 py-1">
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>1. Vision / Prompt Ingestion</span>
+<i class="fa-solid fa-arrow-down text-[10px] text-slate-500"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>2. OpenRouter API Orchestrator</span>
+<i class="fa-solid fa-arrow-down text-[10px] text-slate-500"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>3. In-Browser WASM/Babel (&lt;50ms)</span>
+<i class="fa-solid fa-arrow-down text-[10px] text-slate-500"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-accent/40 text-brand-accent flex items-center justify-between">
+<span>4. Node.js NPM CLI Direct Sync</span>
+<i class="fa-solid fa-cloud-arrow-down text-xs"></i>
+</div>
+</div>
+<!-- Direct Code / Repo CTAs -->
+<div class="pt-2 flex items-center gap-2">
+<a class="flex-1 py-2 rounded-lg bg-brand-card border border-brand-border hover:border-brand-accent text-center text-xs font-mono text-white flex items-center justify-center gap-1.5 transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i> <span>View GitHub</span>
+</a>
+<a class="py-2 px-3 rounded-lg bg-brand-accent text-white hover:bg-blue-600 text-center text-xs font-mono transition-colors" href="mailto:rohanprusty28@gmail.com?subject=Synthora%20AI%20Demo%20Request">
+<i class="fa-solid fa-play"></i>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: CONVERSA AI -->
+<article class="p-6 sm:p-8 rounded-3xl glass-card glass-card-hover border border-brand-border relative overflow-hidden" data-purpose="project-card">
+<div class="flex flex-col lg:flex-row justify-between gap-6">
+<div class="space-y-4 max-w-2xl">
+<!-- Meta Tags -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+<span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20 font-semibold">Web Speech API</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">Node.js</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">Vite ES Bundling</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">Docker</span>
+<span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">GitHub Actions CI/CD</span>
+<span class="text-slate-400 ml-auto">Jun 2025</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-white flex items-center gap-3">
+<span>CONVERSA AI</span>
+<span class="text-sm font-normal text-slate-400">— Voice AI Fleet Management Micro-Frontend</span>
+</h4>
+<p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                  Architected a scalable micro-frontend voice navigation system injected into external web ecosystems via single script tag, delivering sub-150ms speech-to-intent resolution with isolated Shadow DOM execution.
+                </p>
+</div>
+<!-- Technical High-Impact Bullets strictly from resume -->
+<ul class="space-y-2 text-xs text-slate-300 font-sans">
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+<span><strong>O(1) Widget Injection Across 50+ DOMs:</strong> Packaged lightweight custom Vite ES module bundling guaranteeing <strong>100% CSS isolation</strong> across varied third-party host layouts.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+<span><strong>Sub-150ms Latency Intent Parsing Engine:</strong> Integrated Web Speech API with strict hash-map routing algorithms, autonomously guiding users with <strong>95% contextual accuracy</strong>.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-purple-400 mt-0.5"></i>
+<span><strong>Docker &amp; 3-Stage CI/CD:</strong> Slashed container build times by <strong>40%</strong> using multi-stage Dockerfiles and GitHub Actions, delivering <strong>99.9% backend availability</strong>.</span>
+</li>
+</ul>
+<!-- Quantitative Metric Pills -->
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-purple-400">&lt; 150ms</div>
+<div class="text-[10px] font-mono text-slate-400">Voice Intent Latency</div>
+</div>
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-cyan-400">50+ Hosts</div>
+<div class="text-[10px] font-mono text-slate-400">O(1) Clean DOM Injection</div>
+</div>
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-emerald-400">-40% Build</div>
+<div class="text-[10px] font-mono text-slate-400">Docker CI/CD Speedup</div>
+</div>
+</div>
+</div>
+<!-- Architecture micro-view -->
+<div class="lg:w-80 flex flex-col justify-between bg-brand-surface/90 p-4 rounded-2xl border border-brand-border text-xs font-mono space-y-4">
+<div class="text-slate-400 flex items-center justify-between border-b border-brand-border/60 pb-2">
+<span class="text-[11px] text-slate-300 font-semibold"><i class="fa-solid fa-cubes mr-1.5 text-purple-400"></i>Micro-Frontend Architecture</span>
+<span class="text-[10px] text-purple-400">Vite ES Module</span>
+</div>
+<!-- Visual injection diagram -->
+<div class="space-y-2 py-1">
+<div class="p-2 rounded-lg bg-black/60 border border-brand-border text-slate-400 text-[11px]">
+<code>&lt;script src="conversa.esm.js" defer&gt;</code>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>Shadow Root Isolation</span>
+<i class="fa-solid fa-shield-halved text-cyan-400"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>Hash-map Intent Engine</span>
+<i class="fa-solid fa-bolt text-amber-400"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-emerald-400 flex items-center justify-between">
+<span>99.9% Uptime Docker Host</span>
+<i class="fa-brands fa-docker text-sm"></i>
+</div>
+</div>
+<div class="pt-2 flex items-center gap-2">
+<a class="flex-1 py-2 rounded-lg bg-brand-card border border-brand-border hover:border-purple-400 text-center text-xs font-mono text-white flex items-center justify-center gap-1.5 transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i> <span>GitHub Code</span>
+</a>
+<a class="py-2 px-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-center text-xs font-mono transition-colors" href="mailto:rohanprusty28@gmail.com?subject=Conversa%20AI%20Inquiry">
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 3: NEXTROUND AI -->
+<article class="p-6 sm:p-8 rounded-3xl glass-card glass-card-hover border border-brand-border relative overflow-hidden" data-purpose="project-card">
+<div class="flex flex-col lg:flex-row justify-between gap-6">
+<div class="space-y-4 max-w-2xl">
+<!-- Meta Tags -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+<span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">MERN Stack</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">Monaco Editor</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">face-api.js Telemetry</span>
+<span class="px-2.5 py-1 rounded-md bg-brand-surface text-slate-300 border border-brand-border">OpenRouter GPT-4o-mini</span>
+<span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/30">AST Code Parsers</span>
+<span class="text-slate-400 ml-auto">Apr 2025</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-white flex items-center gap-3">
+<span>NEXTROUND AI</span>
+<span class="text-sm font-normal text-slate-400">— Enterprise B2B Mock Interview Operating System</span>
+</h4>
+<p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                  Engineered a FAANG-tier mock interview simulation combining live interactive code assessment in Monaco Editor, real-time voice synthesis with GPT-4o-mini, and biometric proctoring telemetry for 100% test integrity.
+                </p>
+</div>
+<!-- Technical High-Impact Bullets strictly from resume -->
+<ul class="space-y-2 text-xs text-slate-300 font-sans">
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+<span><strong>Monaco Editor + O(n) Big-O Analyzer:</strong> Synchronized live code syntax evaluation with dynamic runtime complexity estimations during simulated interviews.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+<span><strong>Strict Mode Biometric Proctoring:</strong> Integrated <code>face-api.js</code> for continuous posture/eye-gaze tracking combined with OS-level tab-switch detection for <strong>100% integrity validation</strong>.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+<span><strong>AST Parser &amp; Automated PDF Dossiers:</strong> Built backend compilation pipelines that parse student code into Abstract Syntax Trees, generating actionable scoring dossiers and processing Razorpay subscriptions.</span>
+</li>
+</ul>
+<!-- Quantitative Metric Pills -->
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-emerald-400">100%</div>
+<div class="text-[10px] font-mono text-slate-400">Proctoring Integrity</div>
+</div>
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-blue-400">AST Analysis</div>
+<div class="text-[10px] font-mono text-slate-400">Custom Code Parser</div>
+</div>
+<div class="p-2.5 rounded-xl bg-brand-surface/70 border border-brand-border text-center">
+<div class="text-lg font-bold text-white">GPT-4o-mini</div>
+<div class="text-[10px] font-mono text-slate-400">Voice Synthesis Loop</div>
+</div>
+</div>
+</div>
+<!-- Architecture view for NextRound -->
+<div class="lg:w-80 flex flex-col justify-between bg-brand-surface/90 p-4 rounded-2xl border border-brand-border text-xs font-mono space-y-4">
+<div class="text-slate-400 flex items-center justify-between border-b border-brand-border/60 pb-2">
+<span class="text-[11px] text-slate-300 font-semibold"><i class="fa-solid fa-brain mr-1.5 text-emerald-400"></i>Assessment Engine</span>
+<span class="text-[10px] text-emerald-400">Monaco + AST</span>
+</div>
+<!-- Visual Flow -->
+<div class="space-y-2 py-1">
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>Audio &amp; Video Stream</span>
+<i class="fa-solid fa-video text-xs text-red-400"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>face-api.js Posture Ingestion</span>
+<i class="fa-solid fa-eye text-xs text-cyan-400"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 flex items-center justify-between">
+<span>AST Code Linting &amp; Big-O</span>
+<i class="fa-solid fa-microchip text-xs text-brand-accent"></i>
+</div>
+<div class="p-2 rounded-lg bg-brand-card border border-emerald-500/30 text-emerald-400 flex items-center justify-between">
+<span>Automated PDF Evaluation</span>
+<i class="fa-solid fa-file-pdf text-xs"></i>
+</div>
+</div>
+<div class="pt-2 flex items-center gap-2">
+<a class="flex-1 py-2 rounded-lg bg-brand-card border border-brand-border hover:border-emerald-400 text-center text-xs font-mono text-white flex items-center justify-center gap-1.5 transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i> <span>GitHub Code</span>
+</a>
+<a class="py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-center text-xs font-mono transition-colors" href="mailto:rohanprusty28@gmail.com?subject=NextRound%20Demo">
+<i class="fa-solid fa-bolt"></i>
+</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: Flagship Projects Section -->
+<!-- BEGIN: Technical Skills & DSA Matrix -->
+<section class="space-y-8" data-purpose="skills-and-dsa" id="technical-matrix">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-brand-border pb-4">
+<div>
+<div class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Engineering Competence</div>
+<h3 class="text-2xl font-bold text-white tracking-tight">Technical Matrix &amp; Algorithmic Rigour</h3>
+</div>
+<!-- LeetCode live badge pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-brand-surface border border-emerald-500/30 text-xs font-mono text-emerald-400">
+<i class="fa-solid fa-fire"></i>
+<span>LeetCode Peak: 1613 • 300+ Problems Solved</span>
+</div>
+</div>
+<!-- Skills Matrix 3 Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Column 1: Programming Languages -->
+<div class="p-6 rounded-2xl glass-card space-y-4">
+<div class="flex items-center gap-2.5 text-brand-accent font-semibold text-sm border-b border-brand-border pb-3">
+<i class="fa-solid fa-code"></i>
+<span>Programming Languages</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-blue-500"></span> C / C++
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-yellow-400"></span> Python
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-red-400"></span> Java
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-400"></span> JavaScript (ES6+)
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-orange-500"></span> HTML5 / CSS3
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span> SQL (Relational)
+            </span>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed pt-2">
+            Primary focus in high-performance C++ for algorithmic problem solving and JavaScript/Python for distributed systems and API pipelines.
+          </p>
+</div>
+<!-- Column 2: Core CS Fundamentals -->
+<div class="p-6 rounded-2xl glass-card space-y-4">
+<div class="flex items-center gap-2.5 text-cyan-400 font-semibold text-sm border-b border-brand-border pb-3">
+<i class="fa-solid fa-microchip"></i>
+<span>Core CS &amp; Systems Rigour</span>
+</div>
+<div class="space-y-2 text-xs">
+<div class="p-2 rounded-lg bg-brand-surface border border-brand-border text-slate-200 flex items-center justify-between">
+<span>Data Structures &amp; Algorithms</span>
+<span class="text-brand-accent font-mono">Trees, DP, Graphs</span>
+</div>
+<div class="p-2 rounded-lg bg-brand-surface border border-brand-border text-slate-200 flex items-center justify-between">
+<span>Object-Oriented Programming (OOP)</span>
+<span class="text-cyan-400 font-mono">Design Patterns</span>
+</div>
+<div class="p-2 rounded-lg bg-brand-surface border border-brand-border text-slate-200 flex items-center justify-between">
+<span>Operating Systems (OS)</span>
+<span class="text-slate-400 font-mono">Processes, Threads</span>
+</div>
+<div class="p-2 rounded-lg bg-brand-surface border border-brand-border text-slate-200 flex items-center justify-between">
+<span>Computer Networks &amp; DBMS</span>
+<span class="text-slate-400 font-mono">TCP/IP, Relational</span>
+</div>
+<div class="p-2 rounded-lg bg-brand-surface border border-brand-border text-slate-200 flex items-center justify-between">
+<span>System Architecture &amp; Scalability</span>
+<span class="text-emerald-400 font-mono">Rapid Prototyping</span>
+</div>
+</div>
+</div>
+<!-- Column 3: Frameworks, Tools & Cloud -->
+<div class="p-6 rounded-2xl glass-card space-y-4">
+<div class="flex items-center gap-2.5 text-emerald-400 font-semibold text-sm border-b border-brand-border pb-3">
+<i class="fa-solid fa-server"></i>
+<span>Frameworks &amp; DevOps</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">React 19</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">Express.js</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">MongoDB</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">MERN Stack</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">Docker</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">TailwindCSS</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">Vite</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">GitHub Actions</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">WebSockets</span>
+<span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-xs text-slate-300 font-mono">WebRTC</span>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed pt-2">
+            Automated CI/CD pipelines, containerization, micro-frontend distribution and production state machines.
+          </p>
+</div>
+</div>
+<!-- Competitive Programming Spotlight Banner -->
+<div class="p-6 rounded-2xl bg-gradient-to-r from-brand-card via-brand-surface to-brand-card border border-brand-border flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-1 text-center md:text-left">
+<div class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Algorithmic Problem Solving</div>
+<div class="text-xl font-bold text-white">Demonstrated Mastery Across Arrays, Trees, Graphs &amp; Dynamic Programming</div>
+<p class="text-xs text-slate-400">Consistently optimizing space and time trade-offs under competitive tournament constraints.</p>
+</div>
+<div class="flex items-center gap-3">
+<a class="px-4 py-2 rounded-xl bg-brand-surface border border-brand-border hover:border-amber-500 text-xs font-mono text-slate-200 flex items-center gap-2 transition-colors" href="https://leetcode.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-code text-amber-400"></i> LeetCode
+          </a>
+<a class="px-4 py-2 rounded-xl bg-brand-surface border border-brand-border hover:border-blue-400 text-xs font-mono text-slate-200 flex items-center gap-2 transition-colors" href="https://codeforces.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-terminal text-blue-400"></i> Codeforces
+          </a>
+<a class="px-4 py-2 rounded-xl bg-brand-surface border border-brand-border hover:border-emerald-400 text-xs font-mono text-slate-200 flex items-center gap-2 transition-colors" href="https://geeksforgeeks.org" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-laptop-code text-emerald-400"></i> GeeksforGeeks
+          </a>
+</div>
+</div>
+</section>
+<!-- END: Technical Skills & DSA Matrix -->
+<!-- BEGIN: Leadership & Athletic Edge -->
+<section class="space-y-8" data-purpose="leadership-and-achievements" id="leadership-athletics">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-brand-border pb-4">
+<div>
+<div class="text-xs font-mono text-amber-400 uppercase tracking-widest">Beyond The Terminal</div>
+<h3 class="text-2xl font-bold text-white tracking-tight">Leadership, Athletics &amp; Entrepreneurship</h3>
+</div>
+<div class="text-xs text-slate-400 font-mono">
+          High stakes execution, sportsmanship &amp; venture presentations
+        </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Achievement 1: Basketball Gold -->
+<div class="p-6 rounded-2xl glass-card glass-card-hover border border-amber-500/20 relative space-y-4">
+<div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl">
+<i class="fa-solid fa-medal"></i>
+</div>
+<div>
+<div class="text-xs font-mono text-amber-400 uppercase">Inter-IIIT Sports Meet 2025</div>
+<h4 class="text-lg font-bold text-white mt-1">Gold Medalist — Basketball</h4>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+            Won <strong>1st place among 16+ collegiate teams</strong> in a high-stakes national tournament, demonstrating decisive real-time communication, tactical endurance, and leadership under pressure.
+          </p>
+<div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-brand-border/60">
+            National Inter-IIIT Collegiate Champions
+          </div>
+</div>
+<!-- Achievement 2: Club Co-Coordinator -->
+<div class="p-6 rounded-2xl glass-card glass-card-hover border border-brand-border relative space-y-4">
+<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-brand-accent text-xl">
+<i class="fa-solid fa-users-gear"></i>
+</div>
+<div>
+<div class="text-xs font-mono text-brand-accent uppercase">Institutional Operations</div>
+<h4 class="text-lg font-bold text-white mt-1">Co-Coordinator — Basketball Club</h4>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+            Managed end-to-end logistics and fixture scheduling for <strong>7+ inter-collegiate and intra-collegiate events</strong>. Led and mentored a squad of <strong>15+ student volunteers</strong> ensuring zero execution bottlenecks.
+          </p>
+<div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-brand-border/60">
+            IIIT Jabalpur Sports Board
+          </div>
+</div>
+<!-- Achievement 3: IIT Roorkee E-Summit -->
+<div class="p-6 rounded-2xl glass-card glass-card-hover border border-brand-border relative space-y-4">
+<div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+<i class="fa-solid fa-rocket"></i>
+</div>
+<div>
+<div class="text-xs font-mono text-purple-400 uppercase">E-Summit, IIT Roorkee</div>
+<h4 class="text-lg font-bold text-white mt-1">1st Runner-Up — MTP</h4>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+            Led a multidisciplinary team to pitch technical architecture and market scalability models before an executive panel of venture leaders, showcasing strong analytical framing and commercial viability.
+          </p>
+<div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-brand-border/60">
+            IIT Roorkee Venture Showcase
+          </div>
+</div>
+</div>
+</section>
+<!-- END: Leadership & Athletic Edge -->
+<!-- BEGIN: Education & Academic Rigour -->
+<section class="space-y-6" data-purpose="education-section" id="education">
+<div class="border-b border-brand-border pb-4">
+<div class="text-xs font-mono text-brand-accent uppercase tracking-widest">Academic Pedigree</div>
+<h3 class="text-2xl font-bold text-white tracking-tight">Education &amp; Relevant Coursework</h3>
+</div>
+<div class="p-6 sm:p-8 rounded-3xl glass-card border border-brand-border">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-brand-border pb-6">
+<div class="space-y-1">
+<div class="text-xs font-mono text-emerald-400">August 2024 — Present</div>
+<h4 class="text-xl sm:text-2xl font-bold text-white">Indian Institute of Information Technology, Jabalpur</h4>
+<p class="text-sm text-slate-300">B.Tech in Electronics and Communication Engineering (ECE)</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="px-4 py-2 rounded-xl bg-brand-surface border border-emerald-500/40 text-center">
+<div class="text-xs font-mono text-slate-400">Cumulative CPI</div>
+<div class="text-2xl font-extrabold text-emerald-400">8.1</div>
+</div>
+</div>
+</div>
+<div class="pt-6 space-y-3">
+<div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Relevant Core Coursework:</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-network-wired text-brand-accent mr-1"></i> Computer Networks
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-terminal text-cyan-400 mr-1"></i> Operating Systems (OS)
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-database text-amber-400 mr-1"></i> Database Management Systems (DBMS)
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-code text-emerald-400 mr-1"></i> Data Structures and Algorithms (DSA)
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-magnifying-glass-chart text-purple-400 mr-1"></i> Analysis of Algorithms
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-chart-line text-blue-400 mr-1"></i> Probability &amp; Random Processes
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs text-slate-200 font-mono">
+<i class="fa-solid fa-wifi text-red-400 mr-1"></i> Internet of Things (IoT)
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Education & Academic Rigour -->
+<!-- BEGIN: Contact & Recruiter Outreach Section -->
+<section class="space-y-8 pt-4" data-purpose="contact-section" id="contact">
+<div class="border-b border-brand-border pb-4">
+<div class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Immediate Engagement</div>
+<h3 class="text-2xl font-bold text-white tracking-tight">Schedule an Interview or Technical Chat</h3>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: Verified Contact Cards -->
+<div class="lg:col-span-5 space-y-4">
+<div class="p-6 rounded-2xl glass-card space-y-4">
+<h4 class="text-base font-semibold text-white">Direct Coordinates</h4>
+<p class="text-xs text-slate-400 leading-relaxed">
+              Available for Summer 2026 SDE, Full Stack, and Quantitative Systems Analyst internship interviews.
+            </p>
+<div class="space-y-3 pt-2 text-xs font-mono">
+<!-- Copy Email Widget -->
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-between group hover:border-brand-accent transition-colors">
+<div class="flex items-center gap-3 truncate">
+<i class="fa-regular fa-envelope text-brand-accent text-sm"></i>
+<span class="text-slate-200 truncate select-all">rohanprusty28@gmail.com</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-brand-card hover:bg-brand-accent hover:text-white text-slate-300 text-[11px] transition-all" onclick="copyToClipboard('rohanprusty28@gmail.com', this)">
+                  Copy
+                </button>
+</div>
+<!-- Copy Phone Widget -->
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-between group hover:border-emerald-400 transition-colors">
+<div class="flex items-center gap-3">
+<i class="fa-solid fa-phone text-emerald-400 text-sm"></i>
+<span class="text-slate-200 select-all">+91-6002563295</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-brand-card hover:bg-emerald-500 hover:text-white text-slate-300 text-[11px] transition-all" onclick="copyToClipboard('+916002563295', this)">
+                  Copy
+                </button>
+</div>
+<!-- Location Card -->
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<i class="fa-solid fa-location-dot text-amber-400 text-sm"></i>
+<span class="text-slate-200">Jabalpur, Madhya Pradesh, India</span>
+</div>
+<span class="text-[10px] text-slate-400">IST (UTC+5:30)</span>
+</div>
+</div>
+</div>
+<!-- Quick Social Connect -->
+<div class="p-5 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-around text-center">
+<a class="text-slate-400 hover:text-white transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin text-2xl mb-1 text-blue-500"></i>
+<div class="text-[11px] font-mono">LinkedIn</div>
+</a>
+<div class="w-px h-8 bg-brand-border"></div>
+<a class="text-slate-400 hover:text-white transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-2xl mb-1 text-white"></i>
+<div class="text-[11px] font-mono">GitHub</div>
+</a>
+<div class="w-px h-8 bg-brand-border"></div>
+<a class="text-slate-400 hover:text-white transition-colors" href="https://leetcode.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-code text-2xl mb-1 text-amber-500"></i>
+<div class="text-[11px] font-mono">LeetCode</div>
+</a>
+</div>
+</div>
+<!-- Right: Recruiter Dispatch Form -->
+<div class="lg:col-span-7">
+<form class="p-6 sm:p-8 rounded-3xl glass-card border border-brand-border space-y-4" onsubmit="handleRecruiterSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-mono text-slate-400 mb-1.5">Your Name / Recruiter Name</label>
+<input class="w-full rounded-xl bg-brand-surface border border-brand-border text-white text-xs px-3.5 py-2.5 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none font-sans" id="sender-name" placeholder="e.g. Sarah Jenkins (Tech Recruiter)" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono text-slate-400 mb-1.5">Work Email</label>
+<input class="w-full rounded-xl bg-brand-surface border border-brand-border text-white text-xs px-3.5 py-2.5 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none font-sans" id="sender-email" placeholder="sarah@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-mono text-slate-400 mb-1.5">Company / Organization</label>
+<input class="w-full rounded-xl bg-brand-surface border border-brand-border text-white text-xs px-3.5 py-2.5 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none font-sans" id="sender-company" placeholder="e.g. Stripe / Microsoft / Startup" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono text-slate-400 mb-1.5">Role Domain Inquiry</label>
+<select class="w-full rounded-xl bg-brand-surface border border-brand-border text-white text-xs px-3.5 py-2.5 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none font-sans" id="role-type">
+<option value="Software Engineer Intern">Software Engineer Intern (Summer 2026)</option>
+<option value="Business / Systems Analyst">Business &amp; Systems Analyst Intern</option>
+<option value="Full Stack Developer">Full Stack MERN / Voice AI Developer</option>
+<option value="Technical Collaboration">Open Source / Venture Collaboration</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono text-slate-400 mb-1.5">Message / Job Description Overview</label>
+<textarea class="w-full rounded-xl bg-brand-surface border border-brand-border text-white text-xs px-3.5 py-2.5 focus:border-brand-accent focus:ring-1 focus:ring-brand-accent outline-none font-sans" id="sender-message" placeholder="Hello Rohan, we were impressed by your work on Synthora AI and Conversa AI, and would love to schedule a screening interview..." required="" rows="4"></textarea>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="text-xs font-mono text-emerald-400" id="form-feedback"></span>
+<button class="px-6 py-3 rounded-xl bg-brand-accent hover:bg-blue-600 text-white text-xs font-semibold font-mono tracking-wide flex items-center gap-2 shadow-lg shadow-blue-500/20 transition-all" type="submit">
+<span>Dispatch Directly</span>
+<i class="fa-solid fa-paper-plane text-xs"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- END: Contact & Recruiter Outreach Section -->
+</main>
+<!-- END: Main Content Area -->
+<!-- BEGIN: Footer -->
+<footer class="mt-20 border-t border-brand-border bg-brand-dark py-8 text-center text-xs text-slate-500 font-mono">
+<div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="text-white font-semibold">Rohan Kumar Prusty</span>
+<span>•</span>
+<span>IIIT Jabalpur (ECE '28)</span>
+</div>
+<div>
+        Designed for High-Signal Executive Evaluation &amp; Fast Recruiting Workflows
+      </div>
+<div class="text-slate-400">
+        © 2026 Rohan Kumar Prusty. All Rights Reserved.
+      </div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Recruiter 30-Second Modal / Drawer -->
+<div class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4" id="recruiter-modal">
+<div class="relative w-full max-w-2xl rounded-3xl glass-card border border-brand-border p-6 sm:p-8 space-y-6 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+<!-- Close button -->
+<button class="absolute top-5 right-5 w-8 h-8 rounded-full bg-brand-surface border border-brand-border text-slate-400 hover:text-white flex items-center justify-center transition-colors" onclick="toggleRecruiterModal()">
+<i class="fa-solid fa-xmark"></i>
+</button>
+<div class="flex items-center gap-3 border-b border-brand-border pb-4">
+<div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-brand-accent">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Recruiter 30-Second Dossier</h3>
+<p class="text-xs text-slate-400 font-mono">Rohan Kumar Prusty • IIIT Jabalpur</p>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border">
+<div class="text-xs font-mono text-slate-400">CPI</div>
+<div class="text-xl font-bold text-white">8.1</div>
+</div>
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border">
+<div class="text-xs font-mono text-slate-400">LeetCode</div>
+<div class="text-xl font-bold text-emerald-400">1613</div>
+</div>
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border">
+<div class="text-xs font-mono text-slate-400">Graduation</div>
+<div class="text-xl font-bold text-brand-accent">2028</div>
+</div>
+<div class="p-3 rounded-xl bg-brand-surface border border-brand-border">
+<div class="text-xs font-mono text-slate-400">Availability</div>
+<div class="text-xl font-bold text-amber-400">Summer '26</div>
+</div>
+</div>
+<div class="space-y-2 text-xs text-slate-300">
+<div class="p-2.5 rounded-lg bg-brand-surface/70 border border-brand-border flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-brand-accent mt-0.5"></i>
+<span><strong>Technical Core:</strong> Production React 19, Node.js CLI on NPM, Docker CI/CD (40% speedup), Monaco Editor, OpenRouter LLM orchestration.</span>
+</div>
+<div class="p-2.5 rounded-lg bg-brand-surface/70 border border-brand-border flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+<span><strong>Algorithmic Reliability:</strong> 300+ problems solved across LeetCode, Codeforces, and GeeksforGeeks with verified ratings.</span>
+</div>
+<div class="p-2.5 rounded-lg bg-brand-surface/70 border border-brand-border flex items-start gap-2">
+<i class="fa-solid fa-circle-check text-amber-400 mt-0.5"></i>
+<span><strong>Leadership:</strong> Basketball Gold Medalist (Inter-IIIT Sports Meet 2025) &amp; IIT Roorkee E-Summit Runner-Up.</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 pt-2">
+<a class="flex-1 py-2.5 rounded-xl bg-brand-accent hover:bg-blue-600 text-white text-xs font-semibold text-center transition-all" href="mailto:rohanprusty28@gmail.com?subject=Direct%20Interview%20Invite%20for%20Rohan">
+<i class="fa-solid fa-calendar-check mr-1.5"></i> Direct Email Invite
+        </a>
+<button class="py-2.5 px-4 rounded-xl bg-brand-surface border border-brand-border text-slate-200 text-xs font-mono hover:border-emerald-400 transition-all" onclick="copyToClipboard('+916002563295', this)">
+<i class="fa-solid fa-phone mr-1.5 text-emerald-400"></i> +91-6002563295
+        </button>
+</div>
+</div>
+</div>
+<!-- END: Recruiter 30-Second Modal / Drawer -->
+<!-- BEGIN: Interactive Client Functionality Scripts -->
+<script data-purpose="persona-and-view-orchestration">
+    // Recruiter Persona Toggle Management
+    let currentPersona = 'sde';
+
+    function setPersona(persona) {
+      currentPersona = persona;
+      const sdeBtn = document.getElementById('persona-sde-btn');
+      const analystBtn = document.getElementById('persona-analyst-btn');
+      const roleSubheading = document.getElementById('role-subheading');
+      const personaSummary = document.getElementById('persona-summary');
+
+      if (persona === 'sde') {
+        sdeBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-all bg-brand-accent text-white shadow-sm";
+        analystBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white";
+        
+        roleSubheading.innerText = "FULL STACK SDE & DISTRIBUTED SYSTEMS ENTHUSIAST";
+        personaSummary.innerHTML = "ECE undergraduate at <strong>IIIT Jabalpur</strong> (CPI: 8.1) bridging low-level computational logic with scalable MERN/Voice-AI architectures, sub-150ms client integrations, and high-integrity algorithmic optimization.";
+      } else {
+        analystBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-all bg-brand-accent text-white shadow-sm";
+        sdeBtn.className = "flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white";
+        
+        roleSubheading.innerText = "SYSTEMS ARCHITECTURE & QUANTITATIVE BUSINESS ANALYST";
+        personaSummary.innerHTML = "Combining <strong>IIIT Jabalpur ECE analytical rigour</strong> with full-stack telemetry, data-driven system bottlenecks decomposition, and commercial viability frameworks proven at IIT Roorkee E-Summit.";
+      }
+    }
+
+    // Interactive Terminal Command Execution
+    function runTerminalCommand(cmd) {
+      const terminalBody = document.getElementById('terminal-body');
+      let response = '';
+
+      if (cmd === 'whoami') {
+        response = `
+          <p class="text-emerald-400">$ whoami</p>
+          <p class="text-white">Rohan Kumar Prusty — B.Tech ECE @ Indian Institute of Information Technology, Jabalpur (CPI 8.1)</p>
+        `;
+      } else if (cmd === 'metrics') {
+        response = `
+          <p class="text-emerald-400">$ cat system-metrics.json</p>
+          <p class="text-slate-300">{ "leetcode_peak": 1613, "problems_solved": "300+", "compile_latency": "&lt;50ms", "intent_latency": "&lt;150ms", "ci_cd_speedup": "40%" }</p>
+        `;
+      } else if (cmd === 'contact') {
+        response = `
+          <p class="text-emerald-400">$ echo $CONTACT_REACH</p>
+          <p class="text-cyan-300">Email: rohanprusty28@gmail.com | Phone: +91-6002563295 | Jabalpur, MP</p>
+        `;
+      }
+
+      terminalBody.innerHTML += response;
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    // Recruiter Modal Toggle
+    function toggleRecruiterModal() {
+      const modal = document.getElementById('recruiter-modal');
+      modal.classList.toggle('hidden');
+    }
+
+    // Clipboard copy helper
+    function copyToClipboard(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fa-solid fa-check text-emerald-400"></i> Copied!';
+        setTimeout(() => {
+          btnElement.innerHTML = originalText;
+        }, 2000);
+      });
+    }
+
+    // Recruiter dispatch form simulation
+    function handleRecruiterSubmit(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      const name = document.getElementById('sender-name').value;
+      
+      feedback.innerText = `Dispatching confirmation to ${name}... Opening mail client.`;
+      
+      const email = document.getElementById('sender-email').value;
+      const company = document.getElementById('sender-company').value;
+      const role = document.getElementById('role-type').value;
+      const msg = document.getElementById('sender-message').value;
+
+      setTimeout(() => {
+        window.location.href = `mailto:rohanprusty28@gmail.com?subject=${encodeURIComponent(role + ' Inquiry from ' + company)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + msg)}`;
+        feedback.innerText = "Inquiry logged! Direct mail composer opened.";
+      }, 700);
+    }
+
+    // Filter project tags simulation
+    function filterTech(tag) {
+      const cards = document.querySelectorAll('[data-purpose="project-card"]');
+      cards.forEach(card => {
+        card.style.transition = 'opacity 0.2s ease';
+        card.style.opacity = '0.5';
+        setTimeout(() => {
+          card.style.opacity = '1';
+        }, 200);
+      });
+    }
+
+    // Keyboard shortcut for recruiter modal (CMD/CTRL + K)
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        toggleRecruiterModal();
+      }
+    });
+  </script>
+<!-- END: Interactive Client Functionality Scripts -->
+</body></html>

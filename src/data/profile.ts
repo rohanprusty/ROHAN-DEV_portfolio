@@ -1,0 +1,130 @@
+export const profileData = {
+  name: "Rohan Kumar Prusty",
+  role: "ECE @ IIIT Jabalpur",
+  headline: "Software Engineering • Business Analysis • Problem Solving",
+  location: "Jabalpur, Madhya Pradesh",
+  email: "rohanprusty28@gmail.com",
+  phone: "+91-6002563295",
+  social: {
+    github: "https://github.com/rohanprusty28",
+    linkedin: "https://linkedin.com/in/rohanprusty28",
+  },
+  codingProfiles: {
+    github: { username: "rohanprusty", url: "https://github.com/rohanprusty" },
+    leetcode: { username: "rohanprusty28", url: "https://leetcode.com/u/rohanprusty28/" },
+    codeforces: { username: "rohan_28", url: "https://codeforces.com/profile/rohan_28" },
+    geeksforgeeks: { username: "rohanprusty28", url: "https://www.geeksforgeeks.org/user/rohanprusty28/" }
+  },
+  education: {
+    institution: "Indian Institute of Information Technology, Jabalpur",
+    degree: "B.Tech in Electronics and Communication Engineering (ECE)",
+    duration: "August 2024 \u2013 Present",
+    cpi: "8.1",
+    coursework: [
+      "Computer Networks",
+      "Operating Systems (OS)",
+      "Database Management Systems (DBMS)",
+      "Data Structures and Algorithms (DSA)",
+      "Analysis of Algorithms",
+      "Probability and Random Processes",
+      "Internet of Things (IoT)",
+    ],
+  },
+  skills: {
+    programming: ["C", "C++", "Python", "Java", "JavaScript", "HTML5", "CSS3", "SQL"],
+    core: [
+      "Data Structures & Algorithms (DSA)",
+      "Object-Oriented Programming (OOP)",
+      "Operating Systems (OS)",
+      "System Architecture",
+      "Scalability",
+      "Rapid prototyping",
+    ],
+    frameworks: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "TailwindCSS",
+      "MERN Stack",
+      "Vite",
+      "Docker",
+      "Git",
+      "GitHub Actions",
+      "WebSockets",
+      "WebRTC",
+      "MongoDB",
+    ],
+  },
+  projects: [
+    {
+      title: "Synthora AI",
+      tagline: "AI-Powered SaaS Platform",
+      date: "Aug 2025",
+      github: "#",
+      live: null,
+      tech: ["React 19", "Node.js", "OpenRouter API", "MongoDB", "Razorpay"],
+      bullets: [
+        "Engineered an AI-powered SaaS platform leveraging text prompts and vision-to-code models to dynamically generate production-ready React components, featuring an in-browser sandbox for real-time live-editing with < 50ms compile latency.",
+        "Published a custom Node.js CLI utility to the NPM registry, empowering developers to seamlessly inject generated UI assets directly into local workspaces, reducing developer scaffolding time significantly.",
+        "Architected a full-stack MERN infrastructure with stateless JWT authentication and integrated Razorpay webhooks, seamlessly managing a tiered credit-based monetization system for enterprise subscription access at scale.",
+      ],
+      type: "Software",
+    },
+    {
+      title: "CONVERSA AI",
+      tagline: "Voice AI Fleet Management Platform",
+      date: "Jun 2025",
+      github: "#",
+      live: "#",
+      tech: ["Node.js", "React 19", "Docker", "Web Speech API", "MongoDB"],
+      bullets: [
+        "Architected a scalable micro-frontend system utilizing custom Vite ES module bundling, achieving O(1) widget injection complexity via a single script tag and guaranteeing 100% CSS isolation across 50+ unique host DOMs.",
+        "Integrated the Web Speech API with an optimized intent-parsing engine, reducing voice-to-text latency to sub-150ms and utilizing strict hash-map routing to autonomously navigate users with 95% contextual accuracy.",
+        "Engineered a 3-stage concurrent CI/CD pipeline using GitHub Actions and Docker, slashing container build times by 40% to optimize deployment scalability and executing zero-downtime deployment hooks for 99.9% backend availability.",
+      ],
+      type: "Software",
+    },
+    {
+      title: "NEXTROUND AI",
+      tagline: "Enterprise B2B Mock Interview OS",
+      date: "Apr 2025",
+      github: "#",
+      live: "#",
+      tech: ["MERN Stack", "OpenRouter API", "Monaco Editor", "face-api.js", "TailwindCSS"],
+      bullets: [
+        "Built a FAANG-tier mock interview environment integrating OpenRouter/GPT-4o-mini for dynamic AI voice interactions alongside a live Monaco Editor for evaluating code structures and O(n) Big-O complexities in real time.",
+        "Developed a Strict Mode enterprise proctoring engine utilizing face-api.js for continuous emotional/posture telemetry, combined with tab-switch tracking and IDE copy/paste prevention to guarantee 100% assessment integrity.",
+        "Implemented automated backend pipelines processing real-time audio transcriptions and custom AST code parsers, generating comprehensive PDF performance reports and monetizing access via Razorpay subscription tiers.",
+      ],
+      type: "Software",
+    },
+  ],
+  competitive: [
+    "Achieved a peak LeetCode rating of 1613, placing in the top competitive bracket; successfully solved 300+ complex algorithmic problems across LeetCode, Codeforces, and GeeksforGeeks.",
+    "Demonstrated mastery implementing optimized solutions for tree traversals, dynamic programming, graph algorithms, and advanced array manipulation under time-constrained competitive conditions.",
+  ],
+  achievements: [
+    {
+      title: "Gold Medalist",
+      event: "Basketball, Inter-IIIT Sports Meet 2025",
+      bullets: [
+        "Won 1st place among 16+ collegiate teams in a high-stakes national-level tournament, demonstrating decisive leadership, high-performance execution under pressure, and strategic team coordination.",
+      ],
+    },
+    {
+      title: "Co-Coordinator",
+      event: "IIIT Jabalpur Basketball Club",
+      bullets: [
+        "Managed end-to-end operations for 7+ inter-collegiate and intra-collegiate events, demonstrating strong organizational and resource management skills.",
+        "Led and mentored a team of 15+ student volunteers to ensure the seamless execution of large-scale sports tournaments and daily club operations.",
+      ],
+    },
+    {
+      title: "1st Runner-Up",
+      event: "E-Summit, IIT Roorkee (MTP)",
+      bullets: [
+        "Led a multidisciplinary team to pitch technical architecture and innovative business solutions before a panel of industry experts, showcasing strong entrepreneurial problem-solving under pressure.",
+      ],
+    },
+  ],
+};
