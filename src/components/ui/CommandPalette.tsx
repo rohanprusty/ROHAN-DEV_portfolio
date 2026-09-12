@@ -57,6 +57,7 @@ export function CommandPalette() {
     { id: "resume", label: "Download Resume", icon: FileText, action: () => window.open("/resume.pdf.pdf", "_blank") },
     { id: "github", label: "GitHub Profile", icon: Github, action: () => window.open(profileData.social.github, "_blank") },
     { id: "linkedin", label: "LinkedIn Profile", icon: Linkedin, action: () => window.open(profileData.social.linkedin, "_blank") },
+    { id: "substack", label: "Substack Newsletter", icon: FileText, action: () => window.open(profileData.social.substack, "_blank") },
   ];
 
   const filteredCommands = commands.filter(cmd => 

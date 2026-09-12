@@ -236,7 +236,7 @@ export function RecruiterSnapshot() {
                   <div>
                     <h5 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Proof of Work</h5>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#f39c12]"/> 300+ DSA Solved</li>
+                      <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#f39c12]"/> 400+ DSA Solved</li>
                       <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#f39c12]"/> 3+ Featured Projects</li>
                       <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#f39c12]"/> Leadership & Entrepreneurship</li>
                     </ul>
@@ -268,7 +268,7 @@ export function RecruiterSnapshot() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"
           >
             <Counter value={`${profileData.projects.length}+`} label="Projects" />
-            <Counter value="300+" label="DSA Solved" />
+            <Counter value="400+" label="DSA Solved" />
             <Counter value={`${profileData.achievements.length}+`} label="Achievements" />
             <Counter value={profileData.education.cpi} label="CGPA" />
           </motion.div>

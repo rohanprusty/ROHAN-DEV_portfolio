@@ -1,90 +1,68 @@
 import { NextResponse } from "next/server";
+import { DatabaseService } from "@/lib/db/db";
+import { SyncService } from "@/lib/services/sync";
 import { profileData } from "@/data/profile";
 
 export async function GET() {
-  let github = null;
-  let codeforces = null;
-  let leetcode = null;
-
-  // 1. Fetch GitHub
   try {
-    const ghRes = await fetch(`https://api.github.com/users/${profileData.codingProfiles.github.username}`, {
-      headers: { "User-Agent": "Portfolio-App" },
-      next: { revalidate: 3600 }
-    });
-    if (ghRes.ok) {
-      const data = await ghRes.json();
-      if (data?.login) {
-        github = {
-          public_repos: data.public_repos,
-          followers: data.followers,
-          following: data.following,
-          login: data.login
-        };
-      }
+    // Attempt memory cache or DB fetch first
+    let cached = DatabaseService.getMemoryCache();
+    if (!cached) {
+      cached = await DatabaseService.getProofOfWorkFromDB("rohanprusty");
     }
-  } catch (err) {
-    // Silent fail
-  }
 
-  // 2. Fetch Codeforces
-  try {
-    const cfRes = await fetch(`https://codeforces.com/api/user.info?handles=${profileData.codingProfiles.codeforces.username}`, {
-      next: { revalidate: 3600 }
-    });
-    if (cfRes.ok) {
-      const data = await cfRes.json();
-      if (data?.status === "OK" && data.result?.[0]) {
-        codeforces = data.result[0];
-      }
+    if (!cached) {
+      cached = await SyncService.syncAll();
     }
-  } catch (err) {
-    // Silent fail
-  }
 
-  // 3. Fetch LeetCode (via GraphQL or public proxy)
-  try {
-    const lcRes = await fetch("https://leetcode.com/graphql", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    // Codeforces live stats fetch
+    let codeforces = null;
+    try {
+      const cfRes = await fetch(
+        `https://codeforces.com/api/user.info?handles=${profileData.codingProfiles.codeforces.username}`,
+        { next: { revalidate: 3600 } }
+      );
+      if (cfRes.ok) {
+        const cfData = await cfRes.json();
+        if (cfData?.status === "OK" && cfData.result?.[0]) {
+          codeforces = cfData.result[0];
+        }
+      }
+    } catch (err) {
+      // Silent catch
+    }
+
+    return NextResponse.json({
+      github: {
+        public_repos: cached.github.totalRepositories,
+        followers: cached.github.followers,
+        following: cached.github.following,
+        starred_repos: cached.github.starredRepositories,
+        total_contributions: cached.github.totalContributions,
+        current_streak: cached.github.currentStreak,
+        longest_streak: cached.github.longestStreak,
+        contributions: cached.github.contributions,
+        status: cached.github.status,
       },
-      body: JSON.stringify({
-        query: `
-          query userProblemsSolved($username: String!) {
-            matchedUser(username: $username) {
-              submitStatsGlobal {
-                acSubmissionNum {
-                  difficulty
-                  count
-                }
-              }
-            }
-          }
-        `,
-        variables: { username: profileData.codingProfiles.leetcode.username }
-      }),
-      next: { revalidate: 3600 }
+      leetcode: {
+        totalSolved: cached.leetcode.totalSolved,
+        easySolved: cached.leetcode.easySolved,
+        mediumSolved: cached.leetcode.mediumSolved,
+        hardSolved: cached.leetcode.hardSolved,
+        ranking: cached.leetcode.ranking,
+        streak: cached.leetcode.streak,
+        activeDays: cached.leetcode.totalActiveDays,
+        submissions: cached.leetcode.submissions,
+        recentAccepted: cached.leetcode.recentAccepted,
+        status: cached.leetcode.status,
+      },
+      codeforces,
+      lastSyncedAt: cached.lastSyncedAt,
     });
-    if (lcRes.ok) {
-      const data = await lcRes.json();
-      const stats = data?.data?.matchedUser?.submitStatsGlobal?.acSubmissionNum;
-      if (stats && Array.isArray(stats)) {
-        const all = stats.find((s: any) => s.difficulty === "All")?.count || 0;
-        const easy = stats.find((s: any) => s.difficulty === "Easy")?.count || 0;
-        const medium = stats.find((s: any) => s.difficulty === "Medium")?.count || 0;
-        const hard = stats.find((s: any) => s.difficulty === "Hard")?.count || 0;
-        leetcode = { totalSolved: all, easySolved: easy, mediumSolved: medium, hardSolved: hard };
-      }
-    }
   } catch (err) {
-    // Silent fail
+    return NextResponse.json(
+      { error: "Failed to fetch stats", details: String(err) },
+      { status: 500 }
+    );
   }
-
-  return NextResponse.json({
-    github,
-    codeforces,
-    leetcode
-  });
 }

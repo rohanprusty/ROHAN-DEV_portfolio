@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node scripts/test-proof-of-work.js",
+    "sync": "node scripts/sync.mjs all",
+    "sync:github": "node scripts/sync.mjs github",
+    "sync:leetcode": "node scripts/sync.mjs leetcode",
+    "db:migrate": "echo 'Run SQL script supabase_schema.sql in your Supabase SQL Editor or psql $DATABASE_URL < supabase_schema.sql'"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

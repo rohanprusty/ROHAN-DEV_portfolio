@@ -1,19 +1,26 @@
 export const profileData = {
-  name: "Rohan Kumar Prusty",
+  name: "ROHAN PRUSTY",
   role: "ECE @ IIIT Jabalpur",
   headline: "Software Engineering • Business Analysis • Problem Solving",
   location: "Jabalpur, Madhya Pradesh",
   email: "rohanprusty28@gmail.com",
+  collegeEmail: "24bec104@iiitdmj.ac.in",
+  emails: {
+    personal: "rohanprusty28@gmail.com",
+    college: "24bec104@iiitdmj.ac.in",
+  },
   phone: "+91-6002563295",
   social: {
-    github: "https://github.com/rohanprusty28",
-    linkedin: "https://linkedin.com/in/rohanprusty28",
+    github: "https://github.com/rohanprusty",
+    linkedin: "https://www.linkedin.com/in/rohan-prusty-7b9485311/",
+    instagram: "https://www.instagram.com/r_o_h_a_n_prusty/?hl=en",
+    substack: "https://onelife231758.substack.com",
   },
   codingProfiles: {
     github: { username: "rohanprusty", url: "https://github.com/rohanprusty" },
-    leetcode: { username: "rohanprusty28", url: "https://leetcode.com/u/rohanprusty28/" },
-    codeforces: { username: "rohan_28", url: "https://codeforces.com/profile/rohan_28" },
-    geeksforgeeks: { username: "rohanprusty28", url: "https://www.geeksforgeeks.org/user/rohanprusty28/" }
+    leetcode: { username: "Rohan_99_prusty", url: "https://leetcode.com/u/Rohan_99_prusty/" },
+    codeforces: { username: "10th_S_ROHAN", url: "https://codeforces.com/profile/10th_S_ROHAN" },
+    geeksforgeeks: { username: "rohankrhdai", url: "https://www.geeksforgeeks.org/profile/rohankrhdai?tab=activity" }
   },
   education: {
     institution: "Indian Institute of Information Technology, Jabalpur",
@@ -100,7 +107,7 @@ export const profileData = {
     },
   ],
   competitive: [
-    "Achieved a peak LeetCode rating of 1613, placing in the top competitive bracket; successfully solved 300+ complex algorithmic problems across LeetCode, Codeforces, and GeeksforGeeks.",
+    "Achieved a peak LeetCode rating of 1775, placing in the top competitive bracket; successfully solved 400+ complex algorithmic problems across LeetCode, Codeforces, and GeeksforGeeks.",
     "Demonstrated mastery implementing optimized solutions for tree traversals, dynamic programming, graph algorithms, and advanced array manipulation under time-constrained competitive conditions.",
   ],
   achievements: [
@@ -112,11 +119,11 @@ export const profileData = {
       ],
     },
     {
-      title: "Co-Coordinator",
+      title: "Team Captain & Leader",
       event: "IIIT Jabalpur Basketball Club",
       bullets: [
-        "Managed end-to-end operations for 7+ inter-collegiate and intra-collegiate events, demonstrating strong organizational and resource management skills.",
-        "Led and mentored a team of 15+ student volunteers to ensure the seamless execution of large-scale sports tournaments and daily club operations.",
+        "\"Leadership is born under pressure and proven through execution.\" — Captained the university basketball squad, instilling a high-performance mindset, tactical discipline, and relentless team drive.",
+        "Managed end-to-end operations for 7+ national and inter-collegiate tournaments, mentoring a team of 15+ athletes and student volunteers.",
       ],
     },
     {

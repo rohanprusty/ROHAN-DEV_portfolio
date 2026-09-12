@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Instagram, Twitter, Gmail } from "@/components/icons";
+import { Github, Linkedin, Instagram, Substack, Gmail } from "@/components/icons";
 import { profileData } from "@/data/profile";
 
 export function SocialRail() {
@@ -16,7 +16,7 @@ export function SocialRail() {
       >
         <Github size={22} />
       </a>
-      
+
       {/* LinkedIn */}
       <a
         href={profileData.social.linkedin}
@@ -30,7 +30,7 @@ export function SocialRail() {
 
       {/* Instagram */}
       <a
-        href="#"
+        href={profileData.social.instagram}
         target="_blank"
         rel="noreferrer"
         className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center hover:scale-110 transition-transform duration-300"
@@ -39,28 +39,26 @@ export function SocialRail() {
         <Instagram size={20} />
       </a>
 
-      {/* Twitter */}
+      {/* Substack (Replaces Twitter) */}
       <a
-        href="#"
+        href={profileData.social.substack}
         target="_blank"
         rel="noreferrer"
-        className="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-600 text-[#1da1f2] flex items-center justify-center hover:scale-110 transition-transform duration-300"
-        aria-label="Twitter"
+        className="w-10 h-10 rounded-full bg-[#FF6719] text-white flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        aria-label="Substack"
       >
-        <Twitter size={20} />
+        <Substack size={20} />
       </a>
 
-      {/* Gmail */}
+      {/* Gmail (Personal Mail ID Link Only) */}
       <a
-        href={`mailto:${profileData.email || "rohansen856@gmail.com"}`}
+        href={`mailto:${profileData.emails.personal}`}
         className="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-600 text-red-500 flex items-center justify-center hover:scale-110 transition-transform duration-300 relative overflow-hidden group"
         aria-label="Email"
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-20 transition-opacity" />
         <Gmail size={20} className="relative z-10" />
       </a>
-      
-      {/* Decorative Line (if it was attached to social rail, but image shows line below about section, we'll keep the social rail clean) */}
     </div>
   );
 }

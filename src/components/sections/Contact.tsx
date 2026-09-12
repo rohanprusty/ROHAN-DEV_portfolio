@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2, Mail, GraduationCap } from "lucide-react";
+import { profileData } from "@/data/profile";
 
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -10,8 +11,7 @@ export function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    
-    // Simulate API call for now (until Resend is set up)
+
     setTimeout(() => {
       setStatus("success");
     }, 1500);
@@ -20,12 +20,41 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-4 max-w-3xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-sm tracking-widest text-primary font-mono uppercase mb-2">Let's Talk</h2>
           <h3 className="text-3xl font-bold">Build something useful.</h3>
         </div>
 
-        <motion.div 
+        {/* Dual Email Address Banner */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <a
+            href={`mailto:${profileData.emails.personal}`}
+            className="flex items-center gap-3 p-4 bg-card/80 border border-border rounded-xl hover:border-primary/50 transition-colors group"
+          >
+            <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+              <Mail size={20} />
+            </div>
+            <div>
+              <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider block">Personal Email</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors">{profileData.emails.personal}</span>
+            </div>
+          </a>
+
+          <a
+            href={`mailto:${profileData.emails.college}`}
+            className="flex items-center gap-3 p-4 bg-card/80 border border-border rounded-xl hover:border-primary/50 transition-colors group"
+          >
+            <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <GraduationCap size={20} />
+            </div>
+            <div>
+              <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider block">College Email</span>
+              <span className="text-sm font-medium text-white group-hover:text-emerald-400 transition-colors">{profileData.emails.college}</span>
+            </div>
+          </a>
+        </div>
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -38,7 +67,7 @@ export function Contact() {
               </motion.div>
               <h4 className="text-2xl font-bold mb-2">Message received ✓</h4>
               <p className="text-muted-foreground">I'll get back to you within 24 hours.</p>
-              <button 
+              <button
                 onClick={() => setStatus("idle")}
                 className="mt-8 px-6 py-2 border border-border rounded-full text-sm hover:bg-muted transition-colors"
               >
@@ -70,9 +99,9 @@ export function Contact() {
                 <label htmlFor="message" className="text-sm font-medium text-muted-foreground">Message</label>
                 <textarea required id="message" name="message" rows={4} className="w-full bg-background border border-border rounded-md px-4 py-3 focus:outline-none focus:border-primary transition-colors resize-none" placeholder="How can I help you?"></textarea>
               </div>
-              <button 
+              <button
                 disabled={status === "submitting"}
-                type="submit" 
+                type="submit"
                 className="w-full bg-primary text-primary-foreground font-medium py-3 rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {status === "submitting" ? "Sending..." : (
