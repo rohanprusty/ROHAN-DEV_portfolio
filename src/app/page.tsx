@@ -9,12 +9,10 @@ import { Skills } from "@/components/sections/Skills";
 import { Achievements } from "@/components/sections/Achievements";
 import { Contact } from "@/components/sections/Contact";
 import { VisitorCounter } from "@/components/ui/VisitorCounter";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 export default function Home() {
   return (
     <>
-      <CustomCursor />
       <CommandPalette />
       <Navigation />
       <SocialRail />
@@ -28,7 +26,6 @@ export default function Home() {
         <Projects />
         <CodingActivity />
         <Skills />
-        <Achievements />
         <Contact />
       </main>
       

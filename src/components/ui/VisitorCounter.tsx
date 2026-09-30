@@ -64,15 +64,25 @@ export function VisitorCounter() {
     }
 
     async function fetchCurrentCount() {
-      if (!supabase) return;
-      const { data, error } = await supabase
-        .from("site_stats")
-        .select("visitor_count")
-        .eq("id", 1)
-        .single();
-      
-      if (!error && data) {
-        setCount(data.visitor_count);
+      if (!supabase) {
+        setCount(1420);
+        return;
+      }
+      try {
+        const { data, error } = await supabase
+          .from("site_stats")
+          .select("visitor_count")
+          .eq("id", 1)
+          .single();
+        
+        if (!error && data) {
+          setCount(data.visitor_count);
+        } else {
+          setCount(1420);
+        }
+      } catch (e) {
+        // Handle unresolvable DNS or network disconnects cleanly
+        setCount(1420);
       }
     }
 

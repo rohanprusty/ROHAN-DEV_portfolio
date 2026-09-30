@@ -23,13 +23,15 @@ export function CommandPalette() {
       }
 
       // 'hire' easter egg
-      typedStr += e.key.toLowerCase();
-      if (typedStr.length > 4) {
-        typedStr = typedStr.slice(-4);
-      }
-      if (typedStr === "hire") {
-        alert("Excellent decision. 😉 Let's talk: " + profileData.email);
-        typedStr = ""; // reset
+      if (e.key && typeof e.key === "string" && e.key.length === 1) {
+        typedStr += e.key.toLowerCase();
+        if (typedStr.length > 4) {
+          typedStr = typedStr.slice(-4);
+        }
+        if (typedStr === "hire") {
+          alert("Excellent decision. 😉 Let's talk: " + profileData.email);
+          typedStr = ""; // reset
+        }
       }
     };
 
