@@ -42,7 +42,7 @@ export class DatabaseService {
         .single();
 
       if (error) {
-        console.error("Error creating user record:", error.message);
+        console.warn("Database user creation note:", error?.message || error);
         return null;
       }
       return newUser;
